@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'GillSansStd-Light';
+  src: url('GillSansStd-Light.eot');
+  src: url('GillSansStd-Light.woff2') format('woff2'),
+       url('GillSansStd-Light.woff') format('woff'),
+       url('GillSansStd-Light.ttf') format('truetype'),
+       url('GillSansStd-Light.svg#GillSansStd-Light') format('svg'),
+       url('GillSansStd-Light.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+

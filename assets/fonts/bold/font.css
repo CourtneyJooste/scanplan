@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'GillSansStd-Bold';
+  src: url('GillSansStd-Bold.eot');
+  src: url('GillSansStd-Bold.woff2') format('woff2'),
+       url('GillSansStd-Bold.woff') format('woff'),
+       url('GillSansStd-Bold.ttf') format('truetype'),
+       url('GillSansStd-Bold.svg#GillSansStd-Bold') format('svg'),
+       url('GillSansStd-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
