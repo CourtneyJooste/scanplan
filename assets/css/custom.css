@@ -188,6 +188,10 @@ html, body {
   width: 100%;
 }
 
+.splash-logo {
+  max-width: 180px;
+}
+
 /* ==========================================================================
 *                                   ABOUT US
 *  ========================================================================== */
@@ -550,7 +554,7 @@ html, body {
   right: 0;
   top: 0;
   z-index: 4;
-  margin-right: 5px;
+  /* margin-right: 5px; */
 }
 
 /* ==========================================================================
@@ -904,7 +908,7 @@ h3 {
 
 @media (max-width:602px) { /* Our definition of really small */
   .splash-inner {
-    padding-top: 100px;
+    padding-top: 80px;
     padding-bottom: 60px;
   }
   
@@ -913,7 +917,11 @@ h3 {
   }
   
   .splash-inner h4 {
-    font-size: 1.4em;
+    font-size: 1.3em;
+  }
+
+  .splash-logo {
+    max-width: 150px;
   }
   
   /* .dot {
