@@ -18,7 +18,6 @@ $(document).ready(function() {
   }
 });
 
-
 jQuery('html').bind('mousewheel DOMMouseScroll', function (e) {
   scrollFunction(e)
 });
@@ -26,6 +25,7 @@ jQuery('html').bind('mousewheel DOMMouseScroll', function (e) {
 
 const elements = ['1x', '2x', '3x', '4x', '5x', '6x'];
 function scrollFunction(e) {
+  preventDefault(e);
   if(window.innerWidth < 772 || window.innerHeight < 780) {
     var delta;
     if(e === 0) {
@@ -87,6 +87,11 @@ function isElementInViewport (id) {
 
 function Utils() {
 
+}
+
+
+function getStarted() {
+  $('#splash').fadeOut();
 }
 
 Utils.prototype = {
