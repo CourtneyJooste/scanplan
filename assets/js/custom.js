@@ -59,7 +59,6 @@ function scrollFunction(e) {
 }
 
 function setClass(el) {
-  console.log(el); 
   for(var i = 0; i < elements.length; i++) {
     if(elements[i] === el) {
       $('.nav-'+elements[i]).addClass('active'); 

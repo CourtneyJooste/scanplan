@@ -49,12 +49,10 @@
 	</div>
 	<div id="fullpage-outer">
 			<div id="nav-mobile">
-				<div class="container-fluid">
-					<div class="row">
-						<div class="col-xs-2"><img src="assets/img/scanplan-white.png" class="responsive" style="padding: 5px"></div>
-						<div class="col-xs-8"><p>ScanPlan</p></div>
-						<div class="col-xs-2"><i class="material-icons">menu</i></div>
-					</div>
+				<div class="container-fluid nav-mobile-inner">
+					<div class="n-m-1"><img src="assets/img/scanplan-white.png" class="responsive" style="padding: 5px; max-width: 50px;"></div>
+					<div class="n-m-2"><p>ScanPlan</p></div>
+					<div class="n-m-3"><i class="material-icons">menu</i></div>
 				</div>
 		
 			</div>
@@ -370,7 +368,31 @@
 					<div class="section" id="6x">	
 						<div class="container-fluid centered">					
 							<div class="section-inner">
-								<h3>contact us</h3><br>
+								<h3>get in touch</h3><br>
+								<form class="scanplan-form">
+									<input type="text" class="scanplan-input form-control" id="name" placeholder="name" aria-label="name">
+									<input type="text" class="scanplan-input form-control" id="email" placeholder="email" aria-label="email">
+									<div style="padding: 30px 0px 5px 10px; text-align: left;">
+										<div class="row">
+											<div class="col-sm-6">											
+												<label class="s-check">i want to list an expo
+													<input type="checkbox" id="expo">
+													<span class="checkmark"></span>
+												</label>
+											</div>
+											<div class="col-sm-6">											
+												<label class="s-check">i want to list an exhibitor
+													<input type="checkbox" id="exhibitor">
+													<span class="checkmark"></span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<textarea class="scanplan-input form-control" id="message" placeholder="message" rows="5"></textarea>
+									<div class="s-button">
+										<button class="btn btn-primary btn-round">send</button>
+									</div>
+								</form>
 							</div>
 						</div>	
 					</div>

@@ -482,6 +482,34 @@ html, body {
   margin-top: 5px;
 }
 
+.nav-mobile-inner {
+  position: relative;
+}
+
+.n-m-1 {
+  position: absolute; 
+  left: 0;
+  top: 0;
+  z-index: 3;
+  margin-left: 10px;
+}
+
+.n-m-2 {
+  position: absolute; 
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
+
+.n-m-3 {
+  position: absolute; 
+  right: 0;
+  top: 0;
+  z-index: 4;
+  margin-right: 5px;
+}
+
 /* ==========================================================================
 *                               BUTTON STYLES
 *  ========================================================================== */
@@ -509,8 +537,121 @@ html, body {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4ebbfe', endColorstr='#9238ea',GradientType=1 ); /* IE6-9 */
 }
 
+.scanplan-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
 
+.scanplan-input {
+  background-image: none !important;
+  border: 1px solid #9437ea !important;
+  border-radius: 25px !important;
+  width: 100% !important;
+  margin: 5px !important;
+  padding: 25px !important;
+  color: #9437ea !important;
+}
 
+.scanplan-input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #9437ea91 !important;
+  opacity: 1; /* Firefox */
+}
+
+.scanplan-input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #9437ea91 !important;
+}
+
+.scanplan-input::-ms-input-placeholder { /* Microsoft Edge */
+  color: #9437ea91 !important;
+}
+
+.scanplan-input::-webkit-scrollbar {
+  width: 0px;
+}
+
+.scanplan-input::-webkit-scrollbar-track {
+  /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.0);  */
+  border-radius: 10px;
+}
+
+.scanplan-input::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+/* Customize the label (the container) */
+.s-check {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 26px;
+  color: #9437ea91;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.s-check input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: transparent;
+  border: 1px solid #9437ea91;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.s-check:hover input ~ .checkmark {
+  background-color: #eee;
+}
+
+/* When the checkbox is checked, add a blue background */
+.s-check input:checked ~ .checkmark {
+  background-color: #9437ea;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.s-check input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.s-check .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.s-button {
+  margin-top: 25px;
+}
 /* ==========================================================================
 *                               GLOBAL STYLES
 *  ========================================================================== */
