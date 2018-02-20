@@ -16,6 +16,7 @@ $(document).ready(function() {
   } else {
     
   }
+  diableScroll();
 });
 
 jQuery('html').bind('mousewheel DOMMouseScroll', function (e) {
@@ -25,7 +26,6 @@ jQuery('html').bind('mousewheel DOMMouseScroll', function (e) {
 
 const elements = ['1x', '2x', '3x', '4x', '5x', '6x'];
 function scrollFunction(e) {
-  preventDefault(e);
   if(window.innerWidth < 772 || window.innerHeight < 780) {
     var delta;
     if(e === 0) {
@@ -92,6 +92,15 @@ function Utils() {
 
 function getStarted() {
   $('#splash').fadeOut();
+  enableScroll();
+}
+
+function closeMenu() {
+  $('#mobile-menu').fadeOut();
+}
+
+function openMenu() {
+  $('#mobile-menu').fadeIn();
 }
 
 Utils.prototype = {
@@ -137,6 +146,7 @@ $('a[href*="#"]')
             scrollTop: target.offset().top
           }, 0, function() {
             setClass(tarStr);
+            closeMenu();
             // Callback after animation
             // Must change focus!
             var $target = $(target);
@@ -187,6 +197,8 @@ function disableScroll() {
   window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
   window.ontouchmove  = preventDefault; // mobile
   document.onkeydown  = preventDefaultForScrollKeys;
+  $.fn.fullpage.setMouseWheelScrolling(false);
+  $.fn.fullpage.setAllowScrolling(false);
 }
 
 function enableScroll() {
@@ -196,6 +208,8 @@ function enableScroll() {
     window.onwheel = null;
     window.ontouchmove = null;
     document.onkeydown = null;
+    $.fn.fullpage.setMouseWheelScrolling(true);
+    $.fn.fullpage.setAllowScrolling(true);
 }
 
 $(document).ready(function() {

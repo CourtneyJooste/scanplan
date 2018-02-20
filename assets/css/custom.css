@@ -557,6 +557,74 @@ html, body {
   /* margin-right: 5px; */
 }
 
+.n-m-3 a{
+  text-decoration: none !important;
+  color: white !important;
+}
+/* ==========================================================================
+*                                NAV MENU OVERLAY
+*  ========================================================================== */
+
+.mobile-menu {
+  position: fixed;
+  z-index: 101;
+  width: 100%;
+  height: 100%;
+  display: none;
+  left: 0;
+  top: 0;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4ebbfe+0,9238ea+100&0.8+0,0.8+100 */
+  background: -moz-linear-gradient(top, rgba(78,187,254,0.8) 0%, rgba(146,56,234,0.8) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(78,187,254,0.8) 0%,rgba(146,56,234,0.8) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(78,187,254,0.8) 0%,rgba(146,56,234,0.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc4ebbfe', endColorstr='#cc9238ea',GradientType=0 ); /* IE6-9 */
+  overflow-y: auto;
+  overflow-x: hidden;
+
+}
+
+.mobile-menu::-webkit-scrollbar {
+  width: 0px;
+}
+
+.mobile-menu::-webkit-scrollbar-track {
+  /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.0);  */
+  border-radius: 10px;
+}
+
+.mobile-menu::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+.inner-menu {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+}
+
+
+.m-menu-x {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.m-menu-item {
+  padding: 15px;
+}
+
+.m-menu-item a{
+  text-decoration: none !important;
+  color: white !important;
+}
+
+.m-menu-item.active {
+  text-decoration: underline !important;
+  font-weight: 400;
+}
+
 /* ==========================================================================
 *                               BUTTON STYLES
 *  ========================================================================== */
@@ -715,6 +783,97 @@ html, body {
 .s-button {
   margin-top: 25px;
 }
+
+/* CUUUUUUUUUUUUUUUUUUUUUUUUUBE */
+.sk-folding-cube {
+  margin: 20px auto;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+}
+
+.sk-folding-cube .sk-cube {
+  float: left;
+  width: 50%;
+  height: 50%;
+  position: relative;
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.sk-folding-cube .sk-cube:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #007bb6;
+  -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
+          animation: sk-foldCubeAngle 2.4s infinite linear both;
+  -webkit-transform-origin: 100% 100%;
+      -ms-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+}
+.sk-folding-cube .sk-cube2 {
+  -webkit-transform: scale(1.1) rotateZ(90deg);
+          transform: scale(1.1) rotateZ(90deg);
+}
+.sk-folding-cube .sk-cube3 {
+  -webkit-transform: scale(1.1) rotateZ(180deg);
+          transform: scale(1.1) rotateZ(180deg);
+}
+.sk-folding-cube .sk-cube4 {
+  -webkit-transform: scale(1.1) rotateZ(270deg);
+          transform: scale(1.1) rotateZ(270deg);
+}
+.sk-folding-cube .sk-cube2:before {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.sk-folding-cube .sk-cube3:before {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+.sk-folding-cube .sk-cube4:before {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+@-webkit-keyframes sk-foldCubeAngle {
+  0%, 10% {
+    -webkit-transform: perspective(140px) rotateX(-180deg);
+            transform: perspective(140px) rotateX(-180deg);
+    opacity: 0;
+  } 25%, 75% {
+    -webkit-transform: perspective(140px) rotateX(0deg);
+            transform: perspective(140px) rotateX(0deg);
+    opacity: 1;
+  } 90%, 100% {
+    -webkit-transform: perspective(140px) rotateY(180deg);
+            transform: perspective(140px) rotateY(180deg);
+    opacity: 0;
+  }
+}
+
+@keyframes sk-foldCubeAngle {
+  0%, 10% {
+    -webkit-transform: perspective(140px) rotateX(-180deg);
+            transform: perspective(140px) rotateX(-180deg);
+    opacity: 0;
+  } 25%, 75% {
+    -webkit-transform: perspective(140px) rotateX(0deg);
+            transform: perspective(140px) rotateX(0deg);
+    opacity: 1;
+  } 90%, 100% {
+    -webkit-transform: perspective(140px) rotateY(180deg);
+            transform: perspective(140px) rotateY(180deg);
+    opacity: 0;
+  }
+}
+/* END CUBE */
+
 /* ==========================================================================
 *                               GLOBAL STYLES
 *  ========================================================================== */
