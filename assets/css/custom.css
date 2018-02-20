@@ -455,10 +455,10 @@ html, body {
   -ms-transform: rotate(-90deg); /* IE 9 */
   -webkit-transform: rotate(-90deg); /* Safari */
   position: absolute;
-  bottom: 5vh;
+  bottom: 10px;
   left: 50px;
   transform-origin: top left;
-  min-width: 80vh;
+  min-width: 90vh;
 }
 
 .nav-item {
@@ -467,8 +467,8 @@ html, body {
   display: inline-block;
   font-size: 1.4em;
   padding: 5px;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 7px;
+  margin-right: 7px;
 }
 
 .nav-item.active {
