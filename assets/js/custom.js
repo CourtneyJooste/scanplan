@@ -16,7 +16,7 @@ $(document).ready(function() {
   } else {
     
   }
-  diableScroll();
+  disableScroll();
 });
 
 jQuery('html').bind('mousewheel DOMMouseScroll', function (e) {
