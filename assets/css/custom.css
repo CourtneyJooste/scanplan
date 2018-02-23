@@ -81,7 +81,7 @@ html, body {
   display: none;
   position: fixed;
   top: 0;
-  height: 80px;
+  height: 60px;
   width: 100%;
   background: #4ebbfe; /* Old browsers */
   background: -moz-linear-gradient(left, #4ebbfe 0%, #6777f4 50%, #9238ea 99%); /* FF3.6-15 */
@@ -516,22 +516,30 @@ html, body {
   color: white;
   text-align: center;
   font-size: 40px;
-  line-height: 80px;
+  line-height: 60px;
 }
 
 #nav-mobile i {
-  font-size: 48px;
-  padding: 15px 0;
+  font-size: 32px;
+  /* padding: 15px 0; */
+  margin-top: 3px;
   cursor: pointer;
   margin-right: 20px;
 }
 
 #nav-mobile p {
   margin-top: 5px;
+  font-size: 26px;
 }
 
 .nav-mobile-inner {
   position: relative;
+}
+
+.nav-logo {
+  padding: 7px; 
+  max-width: 45px; 
+  margin-top: 3px
 }
 
 .n-m-1 {
@@ -613,7 +621,7 @@ html, body {
 }
 
 .m-menu-item {
-  padding: 15px;
+  padding: 11px;
 }
 
 .m-menu-item a{
