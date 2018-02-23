@@ -147,6 +147,7 @@ onReady(function () {
       $('#'+i+'x').removeClass('fadeOut');
       $('#'+i+'x').addClass('fadeIn');
     }
+    document.addEventListener('touchmove', (e) => scrollFunction(e), true);
   }
 });
 
