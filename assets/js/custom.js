@@ -30,7 +30,6 @@ $(document).ready(function() {
   if(window.innerWidth < 772 || window.innerHeight < 700) {
     setTimeout(()=> {
       scrollFunction(0); 
-      alert('hallo');
     }, 200);
   } else {
     
@@ -114,7 +113,7 @@ function Utils() {
 
 
 function getStarted() {
-  $('#splash').addClass('fadeOutDown', () => $('#splash').hide());
+  $('#splash').addClass('fadeOutDown', $('#splash').hide());
   enableScroll();
 }
 
@@ -141,8 +140,7 @@ function onReady(callback) {
 }
 
 onReady(function () {
-  $('#loading-splash').addClass('fadeOut', () => $('#loading-splash').hide());
-  if(is_touch_device()) alert('Mobile');
+  $('#loading-splash').addClass('fadeOut', $('#loading-splash').hide());
 });
 
 Utils.prototype = {
@@ -252,11 +250,6 @@ function enableScroll() {
     $.fn.fullpage.setMouseWheelScrolling(true);
     $.fn.fullpage.setAllowScrolling(true);
 }
-
-function is_touch_device() {
-  return 'ontouchstart' in window        // works on most browsers 
-      || navigator.maxTouchPoints;       // works on IE10/11 and Surface
-};
 
 $(document).ready(function() {
   $('.carousel-1').owlCarousel({
