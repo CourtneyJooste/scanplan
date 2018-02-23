@@ -143,7 +143,7 @@ onReady(function () {
   $('#loading-splash').addClass('fadeOut', $('#loading-splash').hide());
   if(is_touch_device()) {
     $('#nav-circles').hide();
-    for(var i = 0; i < elements.length; i++) {
+    for(var i = 1; i < elements.length+1; i++) {
       $('#'+i+'x').removeClass('fadeOut');
       $('#'+i+'x').addClass('fadeIn');
     }
