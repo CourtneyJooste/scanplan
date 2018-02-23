@@ -7,7 +7,25 @@ $(document).ready(function() {
     scrollHorizontally: true,
     paddingTop: 90,
     anchors: ['1', '2', '3', '4', '5', '6', '7'],
-    menu: '.navigation'
+    menu: '.navigation',
+    afterLoad: function(anchorLink, index){
+      var loadedSection = $(this);
+
+      // $('#2x').fadeOut();
+
+        $('#'+index+'x').removeClass('fadeOut');
+        $('#'+index+'x').addClass('fadeInUp');
+  
+      //using index
+      // if(index == 3){
+      //   alert("Section 3 ended loading");
+      // }
+  
+      // //using anchorLink
+      // if(anchorLink == '2'){
+      //   $('#2x').addClass('rotateInUpRight');
+      // }
+    }
   });
   if(window.innerWidth < 772 || window.innerHeight < 700) {
     setTimeout(()=>{
@@ -59,6 +77,8 @@ function scrollFunction(e) {
 }
 
 function setClass(el) {
+  $('#'+el).removeClass('fadeOut');
+  $('#'+el).addClass('fadeInUp');
   for(var i = 0; i < elements.length; i++) {
     if(elements[i] === el) {
       $('.nav-'+elements[i]).addClass('active'); 
@@ -91,7 +111,7 @@ function Utils() {
 
 
 function getStarted() {
-  $('#splash').fadeOut();
+  $('#splash').addClass('fadeOutDown', () => $('#splash').hide());
   enableScroll();
 }
 
@@ -102,6 +122,24 @@ function closeMenu() {
 function openMenu() {
   $('#mobile-menu').fadeIn();
 }
+
+var isHiddenNow = (function(el) {
+  console.log(el);
+});
+
+function onReady(callback) {
+  var intervalID = window.setInterval(checkReady, 1000);
+  function checkReady() {
+      if (document.getElementsByTagName('body')[0] !== undefined) {
+          window.clearInterval(intervalID);
+          callback.call(this);
+      }
+  }
+}
+
+onReady(function () {
+  $('#loading-splash').addClass('fadeOut', $('#loading-splash').hide());
+});
 
 Utils.prototype = {
     constructor: Utils,
@@ -139,7 +177,6 @@ $('a[href*="#"]')
       // Does a scroll target exist?
       if (target.length) {
         if(window.innerWidth < 772 || window.innerHeight < 780) {
-          
           // Only prevent default if animation is actually gonna happen
           event.preventDefault();
           $('html, body').animate({
