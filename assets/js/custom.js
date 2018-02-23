@@ -35,13 +35,14 @@ $(document).ready(function() {
     
   }
   disableScroll();
-  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-    $('#nav-circles').hide();
-    for(var i = 0; i < elements.length; i++) {
-      $('#'+i+'x').removeClass('fadeOut');
-      $('#'+i+'x').addClass('fadeIn');
-    }
-  }
+  if( isMobile.any() ) alert('Mobile');
+  // if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+  //   $('#nav-circles').hide();
+  //   for(var i = 0; i < elements.length; i++) {
+  //     $('#'+i+'x').removeClass('fadeOut');
+  //     $('#'+i+'x').addClass('fadeIn');
+  //   }
+  // }
 });
 
 jQuery('html').bind('mousewheel DOMMouseScroll', (e) => {
@@ -257,6 +258,27 @@ function enableScroll() {
     $.fn.fullpage.setMouseWheelScrolling(true);
     $.fn.fullpage.setAllowScrolling(true);
 }
+
+var isMobile = {
+  Android: function() {
+      return navigator.userAgent.match(/Android/i);
+  },
+  BlackBerry: function() {
+      return navigator.userAgent.match(/BlackBerry/i);
+  },
+  iOS: function() {
+      return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+  },
+  Opera: function() {
+      return navigator.userAgent.match(/Opera Mini/i);
+  },
+  Windows: function() {
+      return navigator.userAgent.match(/IEMobile/i);
+  },
+  any: function() {
+      return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+  }
+};
 
 $(document).ready(function() {
   $('.carousel-1').owlCarousel({
