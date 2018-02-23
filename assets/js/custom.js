@@ -42,7 +42,7 @@ jQuery('html').bind('mousewheel DOMMouseScroll', (e) => {
 });
 
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-  document.addEventListener("touchmove", (e)=> scrollFunction(e), true);
+  document.getElementById("fullpage").addEventListener("touchmove", (e)=> scrollFunction(e), true);
 }
 // window.onscroll = function() {scrollFunction()};
 
