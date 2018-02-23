@@ -679,7 +679,8 @@ html, body {
 
 .scanplan-form {
   max-width: 600px;
-  margin: 0 auto;
+  margin: 0 auto;    
+  padding-right: 10px;
 }
 
 .scanplan-input {
