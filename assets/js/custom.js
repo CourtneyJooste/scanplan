@@ -42,7 +42,11 @@ jQuery('html').bind('mousewheel DOMMouseScroll', (e) => {
 });
 
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-  document.getElementById("fullpage").addEventListener("touchmove", (e)=> scrollFunction(e), true);
+  $('#nav-circles').hide();
+  for(var i = 0; i < elements.length; i++) {
+    $('#'+i+'x').removeClass('fadeOut');
+    $('#'+i+'x').addClass('fadeIn');
+  }
 }
 // window.onscroll = function() {scrollFunction()};
 
