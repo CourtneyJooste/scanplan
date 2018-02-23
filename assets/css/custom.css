@@ -66,7 +66,7 @@ html, body {
   font-family: 'Gill Sans', sans-serif;
   background: white;
   font-weight: 300;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.13em;
   line-height: 2em;
 }
 
@@ -162,18 +162,18 @@ html, body {
 }
 
 .splash-inner {
-  padding-top: 25vh;
+  padding-top: 24vh;
   padding-bottom: 15vh;
   color: white;
   text-align: center;
 }
 
 .splash-inner h1 {
- font-size: 8em;
+ font-size: 7em;
 }
 
 .splash-inner h4 {
-  font-size: 2.1em;
+  font-size: 2em;
 }
 
 .dot {
@@ -199,7 +199,7 @@ html, body {
 
 .section-inner {
   height: 100%;
-  padding: 40px 5px 20px 5px;
+  padding: 20px 5px 20px 5px;
 }
 
 .section-text {
@@ -210,8 +210,8 @@ html, body {
 }
 
 .section-text p {
-  font-size: 1.4em;
-  line-height: 2em;
+  font-size: 1.2em;
+  line-height: 1.8em;
 }
 
 
@@ -231,12 +231,13 @@ html, body {
 }
 
 .feature {
-  padding: 15px 10px 35px 10px;
+  padding: 15px 10px 20px 10px;
 }
 
 .feature h4 {
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 400;    
+  margin-bottom: 0;
 }
 
 .feature-icon {
@@ -284,7 +285,7 @@ html, body {
 .c-testimonial {
   max-width: 460px;
   margin: 0 auto;
-  padding: 30px;
+  padding: 25px;
 }
 
 .t-item {
@@ -297,8 +298,8 @@ html, body {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4ebbfe', endColorstr='#9238ea',GradientType=0 ); /* IE6-9 */
   padding-left: 20px;
   padding-right: 20px;
-  height: 300px;
-  line-height: 300px;
+  height: 250px;
+  line-height: 250px;
 
 }
 
@@ -306,13 +307,12 @@ html, body {
   color: white;
   display: inline-block;
   vertical-align: middle;
-  letter-spacing: 0.1em;
   line-height: 2em;
   font-size: 1.13em;
 }
 
 .t-lower {
-  padding: 50px 5px 5px 5px;
+  padding: 20px 5px 5px 5px;
   text-align: center;
 }
 
@@ -324,13 +324,14 @@ html, body {
 .t-lower h5 {
   text-transform: uppercase;
   color: #9437ea;
-  margin-bottom: 0px;
+  margin: 0;
 }
 
 .t-lower p {
   text-transform: lowercase;
   color: #9437ea;
 }
+
 
 /* ==========================================================================
 *                                   POP UPS
@@ -375,18 +376,17 @@ html, body {
 .c-feat {
   max-width: 450px;
   margin: 0 auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top:50px;
+  padding-bottom: 15px;
 }
 
 .c-feat-item {
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 }
 
-.c-feat-item.feature-icon {
-  font-size: 50px;
-  padding: 20px;
-
+.c-feat-item .feature-icon {
+  font-size: 40px;
+  padding: 0 !important;
 }
 
 .c-outer {
@@ -456,10 +456,10 @@ html, body {
   -ms-transform: rotate(-90deg); /* IE 9 */
   -webkit-transform: rotate(-90deg); /* Safari */
   position: absolute;
-  bottom: 10px;
+  bottom: 5vh;
   left: 50px;
   transform-origin: top left;
-  min-width: 90vh;
+  min-width: 95vh;
 }
 
 .nav-item {
@@ -468,8 +468,8 @@ html, body {
   display: inline-block;
   font-size: 1.4em;
   padding: 5px;
-  margin-left: 7px;
-  margin-right: 7px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .nav-item.active {
@@ -479,7 +479,7 @@ html, body {
 
 .phone-box {
   position: absolute;
-  top: 15vh;
+  bottom: 8vh;
   left: 30%;
   margin: 0 auto;
   padding: 20px;
@@ -680,13 +680,17 @@ html, body {
   border-radius: 25px !important;
   width: 100% !important;
   margin: 5px !important;
-  padding: 25px !important;
+  padding: 22px !important;
   color: #9437ea !important;
 }
 
 .scanplan-input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #9437ea91 !important;
   opacity: 1; /* Firefox */
+}
+
+.form-group {
+  margin-top: 15px;
 }
 
 .scanplan-input:-ms-input-placeholder { /* Internet Explorer 10-11 */
@@ -887,14 +891,16 @@ h2 {
   color: #9437ea;
   text-align: center;
   font-size: 4em;
-  letter-spacing: 0.12em;
+  /* letter-spacing: 0.12em; */
+  margin-bottom: 0;
 }
 
 h3 {
   color: #4ebbfe;
   text-align: center;
   font-size: 3.9em;
-  letter-spacing: 0.28em;
+  letter-spacing: 0.25em;
+  margin-bottom: 0;
 }
 
 .fullscreen-loading {
@@ -958,22 +964,42 @@ h3 {
 
 @media (max-width: 1300px) {
 
+  h2 {
+    font-size: 3.6em;
+  }
+
+  h3 {
+    font-size: 3.4em;
+  }
+
   .section-inner {
     padding: 0px;
   }
 
-  #nav-menu {
-    width: 25vw;
+  .stats-line {
+    margin: 0 auto;
+    max-width: 80%;
+  }
+  .stats-block {
+    padding: 15px 10px 15px 10px;
   }
 
+  .c-img {
+    max-width: 190px;
+  }
+  /* #nav-menu {
+    width: 25vw;
+  } */
+
   #fullpage-outer {
-    width: 75vw;
+    /* width: 75vw; */
     right: 0;
   }
 
   .phone-box {
-    display: none;
+    max-width: 16vw;
   }
+
 
   .features-inner {
     display: none;
@@ -982,10 +1008,29 @@ h3 {
   .features-alt {
     display: block;
   }
+  .splash-inner {
+    padding-top: 20vh;
+  }
+  
+  .splash-inner h1 {
+    font-size: 5em;
+  }
+
+  .splash-inner h4 {
+    font-size: 1.8em;
+  }
+
+  .dot {
+    font-size: 0.65em;
+  }
 }
+
 
 @media (max-width:991px) {
   .hideOnSmall{
+    display: none;
+  }
+  .phone-box {
     display: none;
   }
   .showOnSmall {
@@ -997,7 +1042,7 @@ h3 {
   }
 
   .stats-inner {
-    padding: 10px 5px 10px 5px;
+    padding: 5px;
   }
   
   .stats-block {
@@ -1064,7 +1109,7 @@ h3 {
   }
 }
 
-@media (max-height: 779px) {
+@media (max-height: 699px) {
   #fullpage-outer {
     overflow-y: scroll;
   }
@@ -1094,4 +1139,56 @@ h3 {
 }
 
 @media (max-width: 380px) {
+}
+
+ /* Styles for bruce */
+@media (max-height: 880px) {
+  .nav-box {
+    bottom: 1vh;
+  }  
+  .phone-box {
+    bottom: 5vh;
+  }
+
+  .feature-screen {
+    max-width: 240px;
+  }
+
+  .f-t {
+    font-size: 13px;
+  }
+  .c-outer {
+    max-width: 220px;
+    margin: 0 auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .owl-carousel {
+    margin-top: -25px;
+  }
+
+  .c-testimonial {
+    max-width: 460px;
+    margin: 0 auto;
+    padding: 32px;
+  }
+  
+  .t-item {
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 200px;
+    line-height: 200px;  
+  }
+  
+  .t-item span {
+    line-height: 1.6em;
+    font-size: 1em;
+  }
+
+}
+@media (max-height: 830px) {
+  .nav-item {
+    font-size: 1.2em;
+  }
 }

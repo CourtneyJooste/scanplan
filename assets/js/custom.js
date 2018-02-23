@@ -3,13 +3,13 @@
 $(document).ready(function() {
 	$('#fullpage').fullpage({
     responsiveWidth: 772,
-    responsiveHeight: 780,
+    responsiveHeight: 700,
     scrollHorizontally: true,
     paddingTop: 90,
     anchors: ['1', '2', '3', '4', '5', '6', '7'],
     menu: '.navigation'
   });
-  if(window.innerWidth < 772 || window.innerHeight < 780) {
+  if(window.innerWidth < 772 || window.innerHeight < 700) {
     setTimeout(()=>{
       scrollFunction(0); 
     }, 200);
@@ -26,7 +26,7 @@ jQuery('html').bind('mousewheel DOMMouseScroll', function (e) {
 
 const elements = ['1x', '2x', '3x', '4x', '5x', '6x'];
 function scrollFunction(e) {
-  if(window.innerWidth < 772 || window.innerHeight < 780) {
+  if(window.innerWidth < 772 || window.innerHeight < 700) {
     var delta;
     if(e === 0) {
       delta = 0;
