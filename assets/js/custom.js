@@ -141,6 +141,9 @@ function onReady(callback) {
 
 onReady(function () {
   $('#loading-splash').addClass('fadeOut', $('#loading-splash').hide());
+  if(is_touch_device()) {
+    alert('hallo');
+  }
 });
 
 Utils.prototype = {
@@ -250,6 +253,11 @@ function enableScroll() {
     $.fn.fullpage.setMouseWheelScrolling(true);
     $.fn.fullpage.setAllowScrolling(true);
 }
+
+function is_touch_device() {
+  return 'ontouchstart' in window        // works on most browsers 
+      || navigator.maxTouchPoints;       // works on IE10/11 and Surface
+};
 
 $(document).ready(function() {
   $('.carousel-1').owlCarousel({
