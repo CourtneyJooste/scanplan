@@ -28,7 +28,7 @@ $(document).ready(function() {
     }
   });
   if(window.innerWidth < 772 || window.innerHeight < 700) {
-    setTimeout(()=>{
+    setTimeout(()=> {
       scrollFunction(0); 
     }, 200);
   } else {
@@ -37,8 +37,8 @@ $(document).ready(function() {
   disableScroll();
 });
 
-jQuery('html').bind('mousewheel DOMMouseScroll', function (e) {
-  scrollFunction(e)
+jQuery('html').bind('mousewheel DOMMouseScroll scroll', function (e) {
+  scrollFunction(e);
 });
 // window.onscroll = function() {scrollFunction()};
 
