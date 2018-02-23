@@ -30,14 +30,13 @@ $(document).ready(function() {
   if(window.innerWidth < 772 || window.innerHeight < 700) {
     setTimeout(()=> {
       scrollFunction(0); 
+      alert('hallo');
     }, 200);
   } else {
     
   }
-  if(is_touch_device()) alert('Mobile');
   disableScroll();
 });
-
 jQuery('html').bind('mousewheel DOMMouseScroll', (e) => {
   scrollFunction(e);
 });
@@ -143,6 +142,7 @@ function onReady(callback) {
 
 onReady(function () {
   $('#loading-splash').addClass('fadeOut', () => $('#loading-splash').hide());
+  if(is_touch_device()) alert('Mobile');
 });
 
 Utils.prototype = {
