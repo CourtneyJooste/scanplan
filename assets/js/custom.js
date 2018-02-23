@@ -34,7 +34,7 @@ $(document).ready(function() {
   } else {
     
   }
-  if( isMobile.any() ) alert('Mobile');
+  if(is_touch_device()) alert('Mobile');
   disableScroll();
 });
 
@@ -253,25 +253,9 @@ function enableScroll() {
     $.fn.fullpage.setAllowScrolling(true);
 }
 
-var isMobile = {
-  Android: function() {
-      return navigator.userAgent.match(/Android/i);
-  },
-  BlackBerry: function() {
-      return navigator.userAgent.match(/BlackBerry/i);
-  },
-  iOS: function() {
-      return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-  },
-  Opera: function() {
-      return navigator.userAgent.match(/Opera Mini/i);
-  },
-  Windows: function() {
-      return navigator.userAgent.match(/IEMobile/i);
-  },
-  any: function() {
-      return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-  }
+function is_touch_device() {
+  return 'ontouchstart' in window        // works on most browsers 
+      || navigator.maxTouchPoints;       // works on IE10/11 and Surface
 };
 
 $(document).ready(function() {
