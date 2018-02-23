@@ -35,7 +35,7 @@ $(document).ready(function() {
     
   }
   disableScroll();
-  if( isMobile.any() ) alert('Mobile');
+  // if( isMobile.any() ) alert('Mobile');
   // if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
   //   $('#nav-circles').hide();
   //   for(var i = 0; i < elements.length; i++) {
