@@ -42,8 +42,8 @@ jQuery('html').bind('mousewheel DOMMouseScroll', (e) => {
 });
 
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-  window.onscroll = () =>  {scrollFunction(e)};
- }
+  document.addEventListener("touchmove", (e)=> scrollFunction(e), true);
+}
 // window.onscroll = function() {scrollFunction()};
 
 const elements = ['1x', '2x', '3x', '4x', '5x', '6x'];
