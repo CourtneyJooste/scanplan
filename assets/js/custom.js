@@ -36,7 +36,6 @@ $(document).ready(function() {
   }
   disableScroll();
   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-    alert("umwat");
     $('#nav-circles').hide();
     for(var i = 0; i < elements.length; i++) {
       $('#'+i+'x').removeClass('fadeOut');
