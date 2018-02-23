@@ -141,7 +141,7 @@ function onReady(callback) {
 }
 
 onReady(function () {
-  $('#loading-splash').addClass('fadeOut', $('#loading-splash').hide());
+  $('#loading-splash').addClass('fadeOut', () => $('#loading-splash').hide());
 });
 
 Utils.prototype = {
