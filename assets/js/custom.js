@@ -142,7 +142,11 @@ function onReady(callback) {
 onReady(function () {
   $('#loading-splash').addClass('fadeOut', $('#loading-splash').hide());
   if(is_touch_device()) {
-    alert('hallo');
+    $('#nav-circles').hide();
+    for(var i = 0; i < elements.length; i++) {
+      $('#'+i+'x').removeClass('fadeOut');
+      $('#'+i+'x').addClass('fadeIn');
+    }
   }
 });
 
