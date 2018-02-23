@@ -37,9 +37,13 @@ $(document).ready(function() {
   disableScroll();
 });
 
-jQuery('html').bind('mousewheel DOMMouseScroll scroll', function (e) {
+jQuery('html').bind('mousewheel DOMMouseScroll', (e) => {
   scrollFunction(e);
 });
+
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+  window.onscroll = () =>  {scrollFunction(e)};
+ }
 // window.onscroll = function() {scrollFunction()};
 
 const elements = ['1x', '2x', '3x', '4x', '5x', '6x'];
@@ -64,21 +68,23 @@ function scrollFunction(e) {
         // $('.nav-'+elements[i]).removeClass('active');        
       }
     }
+    let el = null;
     if (in_view > 1) {
       if(delta > 0) {
-        setClass(in_view[0]);
+        el = in_view[0];
       } else {
-        setClass(in_view[1]);
+        el = in_view[1];
       }
     } else {
-      setClass(in_view[0]);
+      el = in_view[0];
     }
+    setClass(el);
   }
 }
 
 function setClass(el) {
   $('#'+el).removeClass('fadeOut');
-  $('#'+el).addClass('fadeInUp');
+  $('#'+el).addClass('fadeIn');
   for(var i = 0; i < elements.length; i++) {
     if(elements[i] === el) {
       $('.nav-'+elements[i]).addClass('active'); 
