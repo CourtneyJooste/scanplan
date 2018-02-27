@@ -113,7 +113,8 @@ function Utils() {
 
 
 function getStarted() {
-  $('#splash').addClass('fadeOutDown', $('#splash').hide());
+  $('#splash').addClass('fadeOutDown');
+  setTimeout(()=> $('#splash').hide(), 1000);
   enableScroll();
 }
 
