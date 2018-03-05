@@ -4,7 +4,6 @@ $(document).ready(function() {
 	$('#fullpage').fullpage({
     responsiveWidth: 772,
     responsiveHeight: 700,
-    scrollHorizontally: true,
     paddingTop: 90,
     anchors: ['1', '2', '3', '4', '5', '6', '7'],
     menu: '.navigation',
