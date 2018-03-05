@@ -117,7 +117,7 @@ html, body {
   height: 90px;
   position: fixed;
   /* background: white; */
-  width: 100%;
+  /* width: 100%; */
   z-index: 4;
   text-align: right;
 }
@@ -139,7 +139,7 @@ html, body {
   right: 0;
   height: 60px;
   /* background: white; */
-  width: 100%;
+  /* width: 100%; */
 }
 
 
@@ -796,6 +796,14 @@ html, body {
 
 .s-button {
   margin-top: 25px;
+}
+
+.terms-bottom {
+  margin-top: 15px;
+}
+
+.terms-bottom a {
+  font-size: 10px;
 }
 
 /* CUUUUUUUUUUUUUUUUUUUUUUUUUBE */
